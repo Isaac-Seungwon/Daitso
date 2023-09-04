@@ -65,7 +65,7 @@ public class Main {
 				System.out.println("2. 회원가입");
 				System.out.println("3. 아이디 찾기");
 				System.out.println("4. 비밀번호 찾기");
-				System.out.println("5. 프로그램 종료");
+				System.out.println("0. 프로그램 종료");
 			}
 
 			AdminMenu.printLine();
