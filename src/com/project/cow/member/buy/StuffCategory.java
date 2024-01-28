@@ -8,8 +8,18 @@ import com.project.cow.data.object.SellingStuff;
 import com.project.cow.admin.AdminMenu;
 import com.project.cow.constant.Constant;
 
-public class StuffCategory { // 카테고리별 물품 확인하기
-
+public class StuffCategory {
+	/**
+	 * 	카테고리별 물품 출력 클래스
+	 * @author 이정은
+	 * 목적 : 물품을 카테고리별로 나누어 출력하고 판매 페이지와 연결시키는 클래스
+	 * 기능 : 카테고리를 선택하면 선택사항에 따라 물품을 출력한다.
+	 *        : 유효성 검사를 통해 재입력, 이전화면으로 돌아가기, 판매 페이지로 이동하기가 있다.
+	 */
+	
+	/**
+	 * 입력받은 번호에 따라 물품 출력 및 판매 페이지 이동, 돌아가기, 재입력받기를 선택하는 메소드
+	 */
 	public static void Screen() {
 		Scanner sc = new Scanner(System.in);
 		boolean loop = true;

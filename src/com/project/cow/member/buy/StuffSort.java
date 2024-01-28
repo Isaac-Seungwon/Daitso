@@ -11,6 +11,17 @@ import com.project.cow.data.object.Member;
 import com.project.cow.data.object.SellingStuff;
 
 public class StuffSort {
+	/**
+	 * 	물품을 원하는 기준으로 정렬하는 클래스
+	 * @author 이정은
+	 * 목적 : 물품을 가격낮은순, 가격높은순, 날짜별, 인기별, 나눔으로 나누어 출력하고 판매 페이지와 연결시키는 클래스
+	 * 기능 : 유효한 번호를 입력하면 기준에 따른 정렬을 하고, 정렬된 물품을 출력한다.
+	 *        : 유효성 검사를 통해 재입력, 이전화면으로 돌아가기, 판매 페이지로 이동하기가 있다.
+	 */
+	
+	/**
+	 * 입력받은 번호에 따라 원하는 정렬의 기준을 선택하고, 그에따른 물품을 선택 및 판매 페이지로 이동하는 메소드
+	 */
 	public static void stuffSortChoice() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -109,6 +120,9 @@ public class StuffSort {
 		}
        
 	}
+	/**
+	 * 유효하지 않은 번호를 입력 받을 시 처리해주는 예외 메소드
+	 */
 	public static void Exception() {
 		Scanner sc = new Scanner(System.in);
 		while(true) {
@@ -122,7 +136,11 @@ public class StuffSort {
 			}else System.out.println("알맞은 번호를 입력하십시오.");
 		}
 	}
-	
+	/**
+	 * 
+	 * @author leeje
+	 * 날짜별 정렬을 택할 시, 물품이 가지고 있는 날짜들을 비교해서 정렬해주는 메소드
+	 */
 	static class DateComparator implements Comparator<SellingStuff> {
 	    @Override
 	    public int compare(SellingStuff a, SellingStuff b) {

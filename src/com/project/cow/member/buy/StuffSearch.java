@@ -10,6 +10,18 @@ import com.project.cow.data.object.SellingStuff;
 import com.project.cow.mypage.BuyList;
 
 public class StuffSearch {
+	/**
+	 * 	원하는 물품 검색 클래스
+	 * @author 이정은
+	 * 목적 : 원하는 물품의 키워드를 입력, 관련 물품들을 출력하여 판매 페이지와 연결시키는 클래스
+	 * 기능 : 원하는 키워드를 입력하면 관련 물품들을 출력한다.
+	 *        : 유효성 검사를 통해 이전화면으로 돌아가기, 판매 페이지로 이동하기가 있다.
+	 *        : 또한 입력을 받을 시 띄어쓰기나 대소문자 상관없이 입력받게 한다.
+	 */
+	
+	/**
+	 * 입력받은 키워드에 따라 물품 출력 및 판매 페이지 이동, 돌아가기, 재입력받기를 선택하는 메소드
+	 */
     public static void search() {
         Scanner sc = new Scanner(System.in);
         boolean loop = true;

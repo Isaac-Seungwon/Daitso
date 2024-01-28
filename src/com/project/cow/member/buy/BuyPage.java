@@ -49,13 +49,23 @@ public class BuyPage {
 			String choice = sc.nextLine();
 
 			if (choice.equals("1")) { // 구매하기
+				boolean check=true;
+				String checkDateStr="";
+				
+				while(check) {
 				AdminMenu.printLine();
 				System.out.println("물품 거래 날짜를 선택하세요.");
 				System.out.println("날짜 설정하기");
 				AdminMenu.printLine();
 				System.out.println("구매가 가능하신 날짜는 " + startDateStr + "부터 " + endDateStr + "까지입니다.");
 				System.out.print("구매하고 싶은 날짜 (yyyy-MM-dd): "); // 유효성 검사
-				String checkDateStr = sc.nextLine();
+				checkDateStr = sc.nextLine();
+
+				boolean flag = checkDateStr.matches("\\d{4}-\\d{2}-\\d{2}");
+					if(flag==false) {
+						System.out.println("날짜를 올바른 형식으로 입력해 주시기 바랍니다.");
+					}else check=false;  //loop 벗어남
+				}
 
 				LocalDate startDate = LocalDate.parse(startDateStr);
 				LocalDate endDate = LocalDate.parse(endDateStr);
